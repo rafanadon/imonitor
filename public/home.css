@@ -1,0 +1,209 @@
+*
+{
+    padding: 0;
+    margin: 0;;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5)65%, rgba(0,0,0,0.5)65%),url(Background.jpg.png);
+    background-size: cover;
+    background-position: center;
+    height: 105vh;
+    font-family: sans-serif;
+    overflow: hidden;
+}   
+
+.menu{
+    background: #1D2231;
+    text-align: center;
+}
+
+.logo {
+    width: 180px;
+    position: absolute;
+    top: -8.5%;
+    left: 3%;
+}
+
+.menu ul{
+    display: inline-flex;
+    list-style: none;
+    color: aliceblue;
+}
+
+.require{
+    display:flexbox;
+    font-style: italic;
+    
+}
+.require h1{
+    padding: 2rem;
+}
+.require .req{
+    background: #1D2231;
+    color:#fff;
+    margin-top: 100px;
+    margin-left: 15rem;
+    margin-right: 20rem;
+    padding-left: 2rem;
+    padding-right: -15rem;
+    padding-bottom: 2rem;
+    border-radius: 50px;
+}
+.grid ul{
+    display: table-cell;
+    width: 450px;
+    padding:15px;
+}
+.grid ul li{
+    margin: 5px;
+
+}
+
+/* This section is to edit the boarder and spacing of the menu */
+.menu ul li{
+    width: 150px;
+    margin: 15px;
+    padding: 10px;
+    position: relative;
+}
+/* This section is for the link of menus */
+.menu ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.active, .menu ul li:hover{
+    background: #B02E0C;
+    border-radius: 3px;
+}
+
+/* This section is to create space between menu and their icon */
+.menu .fa-solid{
+    margin-right: 8px;
+}
+
+/* This section is for the class login, the decoration and position */
+.login {
+    position: relative;
+    display: inline-flex;
+}
+
+.login button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: aliceblue;
+    background:#1D2231;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* This section is for the positon and decoration of the form */
+.popup {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.8)50%);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+/* This section is for the exit/close button */
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #1D2231;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* This section is for the Log In word */
+.popup .form h2 {
+    text-align: center;
+    color: aliceblue;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.popup .form h2 span{
+    color: #B02E0C;
+}
+
+.popup .form .form-element{
+    margin: 15px 0px;
+}
+
+.popup .form .form-element label {
+    font-size: 14px;
+    color: aliceblue;
+}
+
+/* This section is for the Email and password */
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.popup .form .form-element input[type="checkbox"] {
+    margin: 5px;
+}
+
+/* This section is for the sign in sign up */
+.popup .form .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #B02E0C;
+    color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.popup .form .form-element button:hover{
+    background-color: #fff;
+    color: #B02E0C;
+}
+
+/* This section is for the forgot password */
+.popup .form .form-element a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: #009FFD;
+    text-decoration: none;
+    font-weight: 600;
+}

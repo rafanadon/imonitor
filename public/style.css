@@ -1,0 +1,174 @@
+/* CSS Document */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(ADMIN\ BG.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+}
+/* This section is for the form box */
+.form-box {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: linear-gradient(to top, rgba(0,0,0,0.7)50%, rgba(0,0,0,0.7)50%);
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+/* This section is for the shadow above */
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 2px #D98324;
+    border-radius: 30px;
+}
+
+/* This section is for the Login and Sign up */
+.toggle-btn {
+    width: 100%;
+    padding: 10px 30px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    
+}
+
+/* This section is for the bacground of the login and sign up */
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #B02E0C,#EB4511);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group {
+    top: 180px;
+    left: 55px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+/* This section is for the design and position of input field */
+.input-field {
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+/* This section is for the submit button */
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #B02E0C,#EB4511);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.index{
+    width: 5%;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: inline-block;
+    margin: auto;
+    background: linear-gradient(to right, #B02E0C,#EB4511);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+
+}
+
+.index .ind {
+    text-decoration: none;
+    color: black;
+}
+
+.chech-box {
+    margin: 30px 10px 30px 0;
+}
+
+span {
+    color: #fff;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+.school-logo {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.school-logo img {
+    width: 40px;
+    margin: 0 12px;
+    box-shadow: 0 0 15px 0 #D98324;
+    border-radius: 50%;
+}
+
+/* This section is for the form of login and sign up */
+#login {
+    left: 50px;
+}
+
+#signup {
+    left: 450px;
+}
+
+.error{
+    background-color: #f2dede;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin:20px auto;
+
+}
+.message {
+    background-color: #fff;
+}
+a.button:visited
+{
+ color:inherit;
+}
+.button{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #B02E0C,#EB4511);
+    text-decoration: none;
+    text-align:center;
+    outline: none;
+    border-radius: 30px;
+}
+
