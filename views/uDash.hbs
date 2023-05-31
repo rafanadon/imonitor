@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> iMonitor </title>
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="csrf-token" content=" ">
+	<link rel="icon" href="/faveyecon.ico">
+	<link rel="stylesheet" href="/user-dashboard.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+	<input type="checkbox" id="nav-toggle">
+	<div class="sidebar">
+		<div class="sidebar-name">
+			<h1><span>iMonitor</span></h1>
+		</div>
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="/uDash" class="active"><span class="las la-user"></span>
+					<span>My profile</span></a>
+				</li>
+				<li>
+					<a href="/uOjt"><span class="las la-clipboard"></span>
+					<span>OJT Weekly Log</span></a>
+				</li>
+				<li>
+					<a href="/requirements"><span class="las la-pager"></span>
+					<span>Update your Profile</span></a>
+				</li>
+				<li>
+					<a href="/uLack"><span class="las la-exclamation"></span>
+					<span>Requirememts</span></a>
+				</li>
+				<li>
+				<a href="/auth/uLogout" class="logout"><span class="las la-power-off"></span>
+					<span>Log out </span></a>
+				</li>
+			</ul>	
+		</div>
+	</div>
+	
+	<div class="main-content">
+		<header>
+			<h2>
+	  			<label for="nav-toggle">
+					<span class="las la-bars"></span> 
+				</label>
+
+				Dashboard
+			</h2>
+			
+			<div class="user-wrapper">
+				<h4> Intern</h4>
+	    	</div>	 
+		</header>
+		<main>
+			<div class="user">
+				{{#each result}}
+				<div class="card-single">
+					<div class="avatar-ctn">
+						{{#if this.image}}
+						<img src="{{this.image}}" class="avatar" alt="user profile picture"/>
+						{{else}}
+						<img src="/pngegg.png" class="avatar" alt="user profile picture"/>
+						{{/if}}
+					</div>
+				
+				</div>
+				
+			</div>
+			
+			<div class="body">
+				
+					
+						<div class="card-header">
+							<h3>Personal Details</h3>
+						</div>
+						<div class="card-body">
+							
+								
+										<div class="input-field1">
+											<label>Full Name: {{this.name}}</label>
+									
+										<br/>
+										
+											<label>Age: {{this.age}}</label>
+
+										<br/>
+						
+											<label>Gender:{{this.gender}}</label>
+										
+										<br/>
+										
+											<label>Date of Birth: {{this.birthday}}</label>
+
+										
+										<br/>
+										
+											<label> Place of Birth: {{this.bPlace}}</label>
+										
+										<br/>
+										
+											<label> Civil Status: {{this.civilStatus}} </label>
+								
+										<br/>
+									
+											<label>City Address: {{this.address}} </label>
+											
+									
+										<br/>
+								
+											<label>Contact Number: {{this.contact}}</label>
+											
+										
+										<br/>
+										
+											<label>E-mail Address: {{this.email}} </label>
+								
+										<br/>
+										</div>
+
+						
+						
+						<div class="card-header">
+							<h4>Parents Information</h4>
+						</div>
+										<div class="input-field2">
+
+											<label>Father's Name: {{this.father}} </label>
+										
+										
+										<br/>
+										
+											<label>Mothers Name: {{this.mother}} </label>
+											
+										
+										<br/>
+									
+											<label>City Address: {{this.cityAdd}} </label>
+											
+								
+										<br/>
+						
+											<label>Provincial Address: {{this.provincial}} </label>	<br/>
+										</div>
+									
+						<div class="card-header">
+							<h5>Company Information</h5>
+							</div>
+										<div class="input-field3">
+
+					
+											<label>Name of Host Company: {{this.company}} </label>
+											
+										
+										<br/>
+										
+											<label>Address of Host Company: {{this.hostAdd}} </label>
+											
+										
+										<br/>
+										
+											<label>Name of Direct Supervisor: {{this.supervisor}} </label>
+											
+										
+										<br/>
+										
+											<label>Contact Number: {{this.hostContact}} </label>
+											<br/>
+											</div>
+										
+											</div>
+											</div>
+											</div>
+			
+					</div>
+				</div>
+
+			</div>
+			{{/each}}
+	 	</main>
+	</div>
+
+	
+</body>
+
+<script src="../controllers/update.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</html>

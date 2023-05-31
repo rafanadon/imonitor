@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Admin Login</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="faveyecon.ico">
+</head>
+
+<body>
+    <div class="main"> 
+        <div class="index"><a link href="/" class ="ind"><ion-icon name="arrow-back-outline"></ion-icon> index</a></div>
+        
+
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+            </div>
+            <div class="school-logo">
+                <img src="/CETSO Logo.png">
+                <img src="/ACTIVE Logo.png">
+                <img src="/GEES Logo.png">
+            </div>
+            
+            <form class="input-group" action="/auth/aLogin" method="POST">
+                <input id="email" name="email" type="text" class="input-field" placeholder="Email" required>
+                <input id="password" name="password" type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            {{#if message}}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+            {{/if}}
+        </div>
+        
+    </div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

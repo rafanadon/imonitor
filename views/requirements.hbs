@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> iMonitor </title>
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="csrf-token" content=" ">
+	<link rel="icon" href="faveyecon.ico">
+	<link rel="stylesheet" href="/user-dashboard.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+	<input type="checkbox" id="nav-toggle">
+	<div class="sidebar">
+		<div class="sidebar-name">
+			<h1><span>iMonitor</span></h1>
+		</div>
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="/uDash" class=""><span class="las la-user"></span>
+					<span>My profile</span></a>
+				</li>
+				<li>
+					<a href="/uOjt"><span class="las la-clipboard"></span>
+					<span>OJT Weekly Log</span></a>
+				</li>
+				<li>
+					<a href="/requirements" class="active"><span class="las la-pager"></span>
+					<span>Update your Profile</span></a>
+				</li>
+				<li>
+					<a href="/uLack"><span class="las la-exclamation"></span>
+					<span>Requirements</span></a>
+				</li>
+				<li>
+				<a href="/auth/uLogout" class="logout"><span class="las la-power-off"></span>
+					<span>Log out </span></a>
+				</li>
+			</ul>	
+		</div>
+	</div>
+	
+	<div class="main-content">
+		<header>
+			<h2>
+	  			<label for="nav-toggle">
+					<span class="las la-bars"></span> 
+				</label>
+
+				Dashboard
+			</h2>
+			
+			<div class="user-wrapper">
+				<h4> Intern</h4>
+	    	</div>	 
+		</header>
+		<main>
+			<div class="user">
+				
+				
+				
+			</div>
+			<div class="body">
+
+				<div class="col-8">
+					<div class="card text-center">
+						<div class="card-header">
+							<h3>Personal Details</h3>
+						</div>
+						<div class="card-body">
+						
+							<form action="/auth/requirements" method="POST" enctype="multipart/form-data">
+							</br>
+							<h3> Upload Your Profile Picture </h3>
+							<input type="file" name="simpleFile" accept="image/*"/>
+ 							{{!-- <input type="submit" class="btn btn-primary">
+							</form>
+							<br/>
+
+							<form action="/auth/requirements" method="POST"  > --}}
+
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="integer" name="internsId" id="internsId" class="form-control" 	placeholder="ID number: ">
+							</div>
+
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="integer" name="age" id="age" class="form-control" 	placeholder="Age:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="gender" name="gender" id="gender" class="form-control" 	placeholder="Gender:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="birthday" id="birthday" class="form-control" 	placeholder="Birthday:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="bPlace" id="bPlace" class="form-control" 	placeholder="Birth Place:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="civilStatus" id="status" class="form-control" 	placeholder="Civil Status:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="address" id="address" class="form-control" 	placeholder="City Address:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="contact" id="contact" class="form-control" 	placeholder="Contact Number:">
+							</div>
+							{{!--  --}}
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="father" id="father" class="form-control" placeholder="Father's Name:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="mother" id="mother" class="form-control" 	placeholder="Mother's Name:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="cityAdd" id="cityAdd" class="form-control" 	placeholder="City Address:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="provincial" id="provincial" class="form-control" 	placeholder="Provincial Adress:">
+							</div>
+							{{!--  --}}
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="company" id="company" class="form-control" 	placeholder="Host Company:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="hostAdd" id="hostAdd" class="form-control" 	placeholder="Host Address:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="text" name="supervisor" id="supervisor" class="form-control" 	placeholder="Name of Direct Supervisor:">
+							</div>
+							<div class="input-group-prepend">
+								<span class="input-group-text-rounded-0">
+								<i class=""></i>
+								</span>
+								<input type="integer" name="hostContact" id="hostContact" class="form-control" 	placeholder="Host Contact Number:">
+							</div>
+							<button type="submit" class="btn btn-primary btn-block myBtn">Submit</button>
+						</form>
+						{{!--  --}}
+
+						
+						
+						{{#if message}}
+                    	<h4 class="alert alert-success mt-4">{{message}}</h4>
+                    	{{/if}}
+						
+					</div>
+
+				</div>
+
+			</div>
+			
+	 	</main>
+	</div>
+
+	
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</html>
