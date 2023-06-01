@@ -1,0 +1,17 @@
+runtime: nodejs14
+env: standard
+instance_class: F1
+automatic_scaling:
+  min_idle_instances: automatic
+  max_idle_instances: automatic
+  min_pending_latency: automatic
+  max_pending_latency: automatic
+
+env_variables:
+DATABASE:  "project"
+DATABASE_HOST: "localhost"
+DATABASE_USER: "imonitor"
+DATABASE_PASSWORD:  "hydr03y3gl0"
+JWT_SECRET: MyKaWonderLand
+JWT_EXPIRES_IN: 120d
+JWT_COOKIE_EXPIRES: 120
